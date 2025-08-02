@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Expense Tracker</h1>
+      <button id="toggle-theme">🌙 Toggle Theme</button>
+    </header>
+
+    <form id="expense-form">
+      <input type="text" id="title" placeholder="Title" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <input type="date" id="date" required />
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="filters">
+      <select id="filter-month">
+        <option value="">All Months</option>
+      </select>
+      <select id="filter-year">
+        <option value="">All Years</option>
+      </select>
+      <button id="export-csv">📤 Export CSV</button>
+    </div>
+
+    <ul id="expense-list"></ul>
+    <canvas id="expense-chart" height="200"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
